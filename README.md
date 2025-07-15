@@ -143,45 +143,67 @@ REVIEW CRITERIA:
 - Documentation
 - Error handling
 
-Based on your analysis, determine if this should use:
-- ready-to-merge.md (excellent work)
-- critical-issues.md (serious problems)
-- minor-improvements.md (good work with suggestions)
+Use the unified branch-review-template.md to provide comprehensive feedback covering:
+- Requirements completion status
+- Critical issues (if any)
+- Improvement suggestions
+- Excellent work highlights
+- Final recommendation
 ```
 
 ### Step 3: Generate Feedback Using Templates
 
-#### 3.1 Choose Appropriate Template
+#### 3.1 Use the Unified Branch Review Template
 
-| Template | When to Use | Quality Score |
-|----------|-------------|---------------|
-| `ready-to-merge.md` | All requirements met, excellent code quality | 8-10/10 |
-| `minor-improvements.md` | Good implementation with minor suggestions | 6-8/10 |
-| `critical-issues.md` | Security issues, broken functionality, missing requirements | 0-5/10 |
+Use the comprehensive `branch-review-template.md` that handles all types of feedback:
+
+- ✅ **Excellent work** highlights and approvals
+- 🚨 **Critical issues** that must be fixed
+- 🔧 **Minor improvements** and suggestions
+- 📊 **Detailed assessment** with quality scores
+- 🎯 **Final recommendation** (approve/fix/conditional)
 
 #### 3.2 Fill Template Variables
 
-**For `ready-to-merge.md`:**
+**Example variables for `branch-review-template.md`:**
 ```
 DEVELOPER: john.doe
 FEATURE_NAME: User Authentication System
-REQUIREMENTS: ["Login functionality", "Password reset", "Session management"]
-BONUS_FEATURES: [{"feature_name": "2FA Support", "description": "Added optional two-factor authentication"}]
-QUALITY_SCORE: 9
-EXCELLENCE_REASONS: ["Clean, maintainable code", "Comprehensive test coverage", "Proper error handling"]
 BRANCH_NAME: feature/issue-123
-SPECIFIC_PRAISE: "The security implementation is particularly impressive."
+ISSUE_NUMBER: 123
+QUALITY_SCORE: 8
+REQUIREMENTS: [
+  {"requirement": "Login functionality", "COMPLETED": true},
+  {"requirement": "Password reset", "COMPLETED": true},
+  {"requirement": "Session management", "COMPLETED": false}
+]
+CRITICAL_ISSUES: [
+  {"ISSUE_TYPE": "Security", "PRIORITY": "High", "FILE_PATH": "auth.js", "LINE_NUMBER": 45}
+]
+IMPROVEMENTS: [
+  {"CATEGORY": "Performance", "PRIORITY": "Medium", "IMPROVEMENT_TITLE": "Optimize database queries"}
+]
+EXCELLENCE_HIGHLIGHTS: [
+  {"CATEGORY": "Security", "HIGHLIGHTS": [{"TITLE": "2FA Implementation", "DESCRIPTION": "Excellent security practices"}]}
+]
 ```
 
 **AI Prompt for Template Generation:**
 ```
-Using the ready-to-merge.md template, generate feedback for:
+Using the branch-review-template.md template, generate comprehensive feedback for:
 
 Developer: @john.doe
 Feature: User Authentication System
 Branch: feature/issue-123
-Requirements: [list from issue]
-Quality Score: 9/10
+Issue: #123
+Overall Quality Score: 8/10
+
+Include:
+- Requirements analysis (what's complete/missing)
+- Any critical issues found
+- Improvement suggestions
+- Excellent work highlights
+- Final recommendation
 
 Fill in all template variables and generate the final markdown output.
 ```
@@ -223,12 +245,10 @@ curl -X PUT \
 
 ### Available Templates
 
-| Template | Purpose | Variables |
-|----------|---------|-----------|
+| Template | Purpose | Key Variables |
+|----------|---------|---------------|
 | `extract-issues-template.md` | Format GitLab issues data | `PROJECT_NAME`, `PROJECT_PATH`, `BOARD_URL`, `CURRENT_DATE` |
-| `ready-to-merge.md` | Excellent implementations | `DEVELOPER`, `FEATURE_NAME`, `REQUIREMENTS`, `QUALITY_SCORE` |
-| `critical-issues.md` | Security/critical problems | `DEVELOPER`, `FEATURE_NAME`, `CRITICAL_ISSUES`, `FIXES_REQUIRED` |
-| `minor-improvements.md` | Good work with suggestions | `DEVELOPER`, `FEATURE_NAME`, `IMPROVEMENTS`, `OPTIONAL_ENHANCEMENTS` |
+| `branch-review-template.md` | Comprehensive branch review | `DEVELOPER`, `FEATURE_NAME`, `BRANCH_NAME`, `ISSUE_NUMBER`, `QUALITY_SCORE`, `REQUIREMENTS`, `CRITICAL_ISSUES`, `IMPROVEMENTS`, `EXCELLENCE_HIGHLIGHTS` |
 
 ### Template Syntax
 

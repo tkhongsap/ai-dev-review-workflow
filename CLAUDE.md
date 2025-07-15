@@ -11,9 +11,7 @@ This is a simplified GitLab issue review workflow system for development leads t
 **Root-level files (flat structure):**
 - `README.md` - Main documentation and quick start guide
 - `extract-issues-template.md` - Mustache template for GitLab issue extraction
-- `ready-to-merge.md` - Template for positive review feedback
-- `critical-issues.md` - Template for critical issue reporting with fixes
-- `minor-improvements.md` - Template for good work with suggestions
+- `branch-review-template.md` - Unified template for comprehensive branch reviews
 - `CLAUDE.md` - This guidance file
 
 ## Core Workflow
@@ -45,24 +43,23 @@ export PROJECT_PATH="group/subgroup/project-name"
 
 ## Quality Assessment Framework
 
-### Ready to Merge (✅)
-Use `ready-to-merge.md` when:
-- All requirements completed
-- Code quality excellent
-- Security verified
-- Tests adequate
+Use the unified `branch-review-template.md` for all reviews. It handles:
 
-### Critical Issues (🚨)
-Use `critical-issues.md` when:
-- Security vulnerabilities found
-- Core functionality broken
-- Requirements missing
+### ✅ Excellent Work Sections
+- Highlight outstanding implementations
+- Acknowledge bonus features
+- Praise good practices
 
-### Minor Improvements (📝)
-Use `minor-improvements.md` when:
-- Implementation solid
-- Minor enhancements possible
-- Style improvements needed
+### 🚨 Critical Issues Sections  
+- Security vulnerabilities
+- Broken functionality
+- Missing requirements
+- Blocking issues
+
+### 🔧 Improvement Sections
+- Code quality suggestions
+- Performance optimizations
+- Best practice recommendations
 
 ## Branch Naming Recognition
 
