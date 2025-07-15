@@ -1,0 +1,379 @@
+# =============================================================================
+# AI-Powered GitLab Issue Review Workflow - .gitignore
+# =============================================================================
+
+# =============================================================================
+# Environment Variables and Secrets
+# =============================================================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# GitLab tokens and credentials
+gitlab-token.txt
+*.token
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# =============================================================================
+# Operating System Files
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# Editors and IDEs
+# =============================================================================
+
+# Visual Studio Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+atlassian-ide-plugin.xml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+*.sublime-session
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+Session.vim
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# =============================================================================
+# Development Tools and Dependencies
+# =============================================================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+.pnp.*
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Ruby
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.bundle/
+vendor/bundle
+lib/bundler/man/
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+vendor/
+
+# Rust
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+target/
+.gradle/
+build/
+.gradletasknamecache
+
+# =============================================================================
+# Build Tools and CI/CD
+# =============================================================================
+
+# General build artifacts
+build/
+dist/
+out/
+.build/
+.output/
+
+# Docker
+.dockerignore
+Dockerfile.local
+docker-compose.override.yml
+.docker/
+
+# CI/CD
+.github/workflows/local/
+.gitlab-ci.local.yml
+.circleci/local/
+.travis.local.yml
+
+# =============================================================================
+# Logs and Debugging
+# =============================================================================
+
+# Log files
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# =============================================================================
+# Temporary and Cache Files
+# =============================================================================
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# Cache directories
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.vuepress/dist
+.serverless/
+.fusebox/
+
+# =============================================================================
+# GitLab Issue Review Workflow Specific
+# =============================================================================
+
+# Generated issue files
+issues.json
+issues-*.json
+extracted-issues/
+generated-reports/
+
+# Local configuration overrides
+config.local.*
+settings.local.*
+
+# Processed templates output
+output/
+generated/
+processed-templates/
+
+# GitLab API responses
+api-responses/
+gitlab-data/
+
+# Review artifacts
+review-output/
+feedback-generated/
+branch-analysis/
+
+# Local testing files
+test-issues/
+test-branches/
+local-testing/
+
+# =============================================================================
+# Documentation and Static Site Generators
+# =============================================================================
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Hugo
+public/
+resources/
+
+# Gatsby
+.cache/
+public/
+
+# VuePress
+.vuepress/dist/
+
+# Docusaurus
+.docusaurus/
+build/
+
+# =============================================================================
+# Miscellaneous
+# =============================================================================
+
+# Backup files
+*.orig
+*.rej
+*.bak
+*.backup
+
+# Archive files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Personal notes and drafts
+NOTES.md
+TODO.md
+DRAFT*.md
+personal-notes/
+drafts/
+
+# =============================================================================
+# Keep these files (negation patterns)
+# =============================================================================
+
+# Keep essential template files
+!templates/
+!*.md
+!.claude/
+!.gitignore
+!README*
+!CLAUDE.md
+!LICENSE* 
