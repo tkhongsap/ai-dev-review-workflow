@@ -1,0 +1,7 @@
+# Azure OpenAI Configuration
+AZURE_OPENAI_API_KEY=your-azure-openai-api-key-here
+AZURE_OPENAI_ENDPOINT=https://your-resource-name.cognitiveservices.azure.com/
+
+# GitHub Environment Variables (for local testing, these are usually set by GitHub Actions)
+GITHUB_ACTOR=local-tester
+GITHUB_EVENT_NAME=push
